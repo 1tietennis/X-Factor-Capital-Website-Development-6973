@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CountdownTimer from './CountdownTimer';
 import SafeIcon from '../common/SafeIcon';
@@ -70,14 +71,16 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1 }}
           className="space-y-6"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-12 py-4 rounded-xl text-xl font-bold hover-glow transition-all duration-300"
-          >
-            <SafeIcon icon={FiZap} className="inline mr-3 text-2xl" />
-            💥 Start Now – Offer Ends In...
-          </motion.button>
+          <Link to="/get-started">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-12 py-4 rounded-xl text-xl font-bold hover-glow transition-all duration-300"
+            >
+              <SafeIcon icon={FiZap} className="inline mr-3 text-2xl" />
+              💥 Start Now – Offer Ends In...
+            </motion.button>
+          </Link>
           
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm text-gray-400">
             <div className="flex items-center">

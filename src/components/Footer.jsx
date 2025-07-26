@@ -12,7 +12,8 @@ const Footer = () => {
     { name: 'Services', path: '/services' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Get Started', path: '/get-started' }
   ];
 
   const services = [
@@ -52,13 +53,15 @@ const Footer = () => {
               <div className="text-sm opacity-80">Limited time offer - Don't miss out!</div>
             </div>
           </div>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-black text-electric-blue px-6 py-2 rounded-lg font-bold hover:bg-gray-900 transition-colors"
-          >
-            Claim Now
-          </motion.button>
+          <Link to="/get-started">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-black text-electric-blue px-6 py-2 rounded-lg font-bold hover:bg-gray-900 transition-colors"
+            >
+              Claim Now
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
 

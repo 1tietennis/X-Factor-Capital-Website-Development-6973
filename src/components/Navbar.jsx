@@ -55,14 +55,16 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-6 py-2 rounded-lg font-semibold hover-glow"
-            >
-              <SafeIcon icon={FiPhone} className="inline mr-2" />
-              Get Started
-            </motion.button>
+            <Link to="/get-started">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-6 py-2 rounded-lg font-semibold hover-glow"
+              >
+                <SafeIcon icon={FiPhone} className="inline mr-2" />
+                Get Started
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -97,9 +99,11 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="w-full mt-4 bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-6 py-2 rounded-lg font-semibold">
-              Get Started
-            </button>
+            <Link to="/get-started" onClick={() => setIsOpen(false)}>
+              <button className="w-full mt-4 bg-gradient-to-r from-electric-blue to-cyan-500 text-black px-6 py-2 rounded-lg font-semibold">
+                Get Started
+              </button>
+            </Link>
           </motion.div>
         )}
       </div>
